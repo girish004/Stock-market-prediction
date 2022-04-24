@@ -77,11 +77,9 @@
 <script type="text/javascript" src="{% static 'Stock/media/cht.js' %}"></script>
 <script type="text/javascript">
 	var ga;
-	if(document.getElementById("gtype").value=="open")
-	{ga = {{ open|safe }}}
+    ga = {{ open|safe }}
 	function fun()
 	{
-	alert(document.getElementById("gtype").value);
 	if(document.getElementById("gtype").value=="open")
 	{ga = {{ open|safe }}}
 	if(document.getElementById("gtype").value=="vol")
@@ -147,7 +145,7 @@
                     </center>
                 </form>
                 <p><label>Result:</label></p>
-                <p><span style="background-color:#139A56"><textarea  rows="3" cols="50">{{ ans.0.0 }}</textarea></span></p>
+                <p><span style="background-color:#139A56"><textarea  rows="3" cols="50">{{ ans.0 }}</textarea></span></p>
             </td>
             <td style="float:right;background-color:white;width:50%;height:85%" id="curve_chart">
                 
